@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TokoPen</string>
+    <string name="terbaru">Terbaru</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="beli">Beli</string>
+    <string name="dummy_price">Rp. 10000</string>
+    <string name="ball_pen_description">Bolpoin, adalah alat tulis yang ujungnya menggunakan bola kecil yang berputar untuk mengontrol pengeluaran tinta kental yang disimpan dalam kolom berbentuk silinder. Ujung bolpoin berupa bola kecil dari kuningan, baja, atau tungsten karbida yang diameternya berbeda-beda, umumnya 0,7 hingga 1,2 mm.</string>
+    <string name="ball_pen_name">Ball Pen</string>
+    <string name="cd_pen_image">Pen Image</string>
+    <string name="about_me">About Me</string>
+    <string name="share">Share</string>
+    <string name="add_to_cart">Add to cart</string>
+</resources>
