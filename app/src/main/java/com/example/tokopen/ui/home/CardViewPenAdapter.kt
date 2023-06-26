@@ -1,10 +1,12 @@
 package com.example.tokopen.ui.home
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -16,6 +18,7 @@ class CardViewPenAdapter : RecyclerView.Adapter<CardViewPenAdapter.CardViewHolde
     private lateinit var onItemClickCallback: OnItemClickCallback
     private var list: ArrayList<Pen> = arrayListOf()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setList(list: List<Pen>) {
         this.list.clear()
         this.list.addAll(list)
@@ -35,6 +38,25 @@ class CardViewPenAdapter : RecyclerView.Adapter<CardViewPenAdapter.CardViewHolde
                 tvPenName.text = pen.name
                 tvPenPrice.text = "Rp.${pen.price}"
                 tvPenDescription.text = pen.detail
+
+
+                actionShare.setOnClickListener {
+                    Toast.makeText(
+                        itemView.context,
+                        "Berhasil membagikan ${pen.name}",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+                }
+
+                actionAddCart.setOnClickListener {
+                    Toast.makeText(
+                        itemView.context,
+                        "Berhasil menambahkan ${pen.name} ke keranjang",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+                }
 
                 itemView.setOnClickListener { onItemClickCallback.onItemClicked(pen) }
             }

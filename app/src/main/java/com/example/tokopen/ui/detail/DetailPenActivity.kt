@@ -74,7 +74,7 @@ class DetailPenActivity : AppCompatActivity() {
     private fun setPenDetail() {
         with(binding) {
             tvPenName.text = viewModel.name
-            tvPenPrice.text = viewModel.price
+            tvPenPrice.text = "Rp.${viewModel.price}"
             tvPenDetail.text = viewModel.desc
             Glide.with(this@DetailPenActivity).load(viewModel.src).into(imgPen)
         }
